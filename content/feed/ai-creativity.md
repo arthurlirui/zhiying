@@ -1,12 +1,15 @@
 ---
 title: "为什么AI不会取代人类创造力"
-summary: 知乎高赞回答
+summary: AI擅长模式匹配，但缺乏真正的灵感迸发。人类创造力源于情感体验和跨领域联想，未来人与AI是协作关系。
 date: 2025-01-15
 featured: true
 type: page
 reading_time: "3分钟"
 author: "王明AI研究者"
 tags: ["AI", "创造力", "科技"]
+image:
+  src: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&q=80"
+  alt: "AI与人类创造力"
 ---
 
 ## 核心观点

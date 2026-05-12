@@ -1,12 +1,15 @@
 ---
 title: "远程办公五年后，我发现了什么"
-summary: 知乎高赞回答
+summary: 自律是最好的生产力，沟通方式比工作时间更重要，工作与生活需要明确的边界。
 date: 2025-01-14
 featured: true
 type: page
 reading_time: "3分钟"
 author: "职场观察家"
 tags: ["职场", "远程办公", "效率"]
+image:
+  src: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80"
+  alt: "远程办公协作"
 ---
 
 ## 核心观点

@@ -1,12 +1,15 @@
 ---
 title: "创业失败后我学到的10件事"
-summary: 知乎高赞回答
+summary: 现金流比估值更重要，团队比想法更重要，执行力决定一切。
 date: 2025-01-13
 featured: true
 type: page
 reading_time: "3分钟"
 author: "连续创业者"
 tags: ["创业", "经验", "商业"]
+image:
+  src: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=600&q=80"
+  alt: "创业与商业"
 ---
 
 ## 核心观点
