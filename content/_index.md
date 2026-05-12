@@ -707,25 +707,81 @@ sections:
   # ═══════════════════════════════════════════════════════════════════════════
   # 行动召唤区
   # ═══════════════════════════════════════════════════════════════════════════
-  - block: cta
+  - block: markdown
     id: cta
     content:
-      title: "开始你的高效学习之旅"
+      title: ""
       text: |
-        告别信息焦虑，让通勤时间成为你的知识充电站。
-        扫码体验，让每一分钟都有价值。
-      primary_action:
-        text: "立即体验"
-        url: "/zhihu/"
-        icon: rocket-launch
-      secondary_action:
-        text: "了解更多"
-        url: "/#features"
-        icon: arrow-right
+        <div class="cta-section">
+          <h2>开始你的高效学习之旅</h2>
+          <p>告别信息焦虑，让通勤时间成为你的知识充电站。<br/>扫码体验，让每一分钟都有价值。</p>
+          <div class="cta-buttons">
+            <a href="/zhihu/" class="cta-btn primary">🚀 立即体验</a>
+            <a href="/#features" class="cta-btn secondary">了解更多 →</a>
+          </div>
+        </div>
+
+        <style>
+          .cta-section {
+            text-align: center;
+            padding: 4rem 2rem;
+          }
+          .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+          }
+          .cta-section p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 2.5rem;
+            line-height: 1.8;
+          }
+          .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+          }
+          .cta-btn {
+            display: inline-block;
+            padding: 14px 32px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+          }
+          .cta-btn:hover {
+            transform: translateY(-2px);
+          }
+          .cta-btn.primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+          }
+          .cta-btn.primary:hover {
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+          }
+          .cta-btn.secondary {
+            background: rgba(102, 126, 234, 0.1);
+            color: #667eea;
+          }
+          .cta-btn.secondary:hover {
+            background: rgba(102, 126, 234, 0.2);
+          }
+          @media (prefers-color-scheme: dark) {
+            .cta-section p {
+              color: #aaa;
+            }
+            .cta-btn.secondary {
+              background: rgba(102, 126, 234, 0.2);
+            }
+          }
+        </style>
     design:
       spacing:
-        padding: ['5rem', '0', '5rem', '0']
-      css_class: 'dark:bg-gradient-to-r dark:from-indigo-900 dark:to-purple-900'
+        padding: ['3rem', '0', '3rem', '0']
+      css_class: 'bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-indigo-950'
 
   # ═══════════════════════════════════════════════════════════════════════════
   # 底部信息
