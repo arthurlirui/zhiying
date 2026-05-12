@@ -1,10 +1,12 @@
-# Configuration of Hugo
-# Documentation: https://gohugo.io/getting-started/configuration/
+# ══════════════════════════════════════════════════════════════════════════════
+# 知影 · AI读帖官 - Hugo 配置
+# ══════════════════════════════════════════════════════════════════════════════
 
-# Website name (set in params.yaml under hugoblox.identity.name)
-title: ''
+# Website name
+title: "知影 · AI读帖官"
+
 # Website URL
-baseURL: 'https://example.com/'
+baseURL: 'https://zhiying.example.com/'
 
 ############################
 ## LANGUAGE

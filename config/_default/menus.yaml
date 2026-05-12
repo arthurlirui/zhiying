@@ -1,10 +1,19 @@
-# Navigation Links
-# Simple navigation for a slides-focused site
-
+---
+title: 导航菜单
+---
 main:
-  - name: Home
+  - name: 首页
     url: /
-    weight: 10
-  - name: Browse Decks
-    url: /slides/
-    weight: 20
+    weight: 1
+  - name: 精选
+    url: /zhihu/
+    weight: 2
+  - name: 功能
+    url: /#features
+    weight: 3
+  - name: 体验
+    url: /#demo
+    weight: 4
+  - name: 架构
+    url: /#architecture
+    weight: 5

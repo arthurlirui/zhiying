@@ -1,108 +1,103 @@
 # ══════════════════════════════════════════════════════════════════════════════
-# MARKDOWN SLIDES - HUGO BLOX CONFIGURATION
-# A minimal template for hosting and sharing slide decks
-# Documentation: https://docs.hugoblox.com/
+# 知影 · AI读帖官 - Hugo Blox 配置
 # ══════════════════════════════════════════════════════════════════════════════
 hugoblox:
   schema: "2.0"
 
   # ────────────────────────────────────────────────────────────────────────────
-  # IDENTITY
-  # Customize your slide deck site branding
+  # 身份标识
   # ────────────────────────────────────────────────────────────────────────────
   identity:
-    name: "My Slides"
-    organization: ""
-    type: person                        # person | organization
-    tagline: "Open-source slide decks"
-    description: "Markdown-based slide presentations. Write in Markdown, present anywhere, share with anyone."
+    name: "知影"
+    organization: "知影工作室"
+    type: product
+    tagline: "AI读帖官 · 看图说话"
+    description: "知乎数字人 · 智能内容压缩与语音化引擎，把长图文转化为通勤场景的轻量级内容"
     social:
-      twitter: ""                       # Twitter/X handle for social cards
+      twitter: ""
 
   # ────────────────────────────────────────────────────────────────────────────
-  # THEME
+  # 主题配置 - 现代极简风格
   # ────────────────────────────────────────────────────────────────────────────
   theme:
-    mode: system                        # light | dark | system
+    mode: system
     pack: "default"
     colors:
-      primary: ""
-      secondary: ""
-      neutral: ""
+      primary: "indigo"
+      secondary: "slate"
+      neutral: "neutral"
 
   # ────────────────────────────────────────────────────────────────────────────
-  # TYPOGRAPHY
+  # 排版
   # ────────────────────────────────────────────────────────────────────────────
   typography:
-    # Theme pack: name from data/fonts/
     pack: "modern"
 
   # ────────────────────────────────────────────────────────────────────────────
-  # LAYOUT
+  # 布局
   # ────────────────────────────────────────────────────────────────────────────
   layout:
     radius: "md"
     spacing: "comfortable"
 
   # ────────────────────────────────────────────────────────────────────────────
-  # HEADER
+  # 页头导航
   # ────────────────────────────────────────────────────────────────────────────
   header:
     enable: true
-    style: navbar-simple                # Clean, minimal navbar
+    style: navbar-simple
     sticky: true
     align: center
-    search: true                        # Enable search for larger deck collections
+    search: false
     theme_toggle: true
-    theme_picker: false
+    theme_picker: true
     language_switcher: false
 
   # ────────────────────────────────────────────────────────────────────────────
-  # FOOTER
+  # 页脚
   # ────────────────────────────────────────────────────────────────────────────
   footer:
     style: minimal
     language_switcher: false
-    text: ""
+    text: "© 2025 知影 · AI读帖官 | 让信息像短视频一样被高效消费"
 
   # ────────────────────────────────────────────────────────────────────────────
-  # COPYRIGHT
+  # 版权信息
   # ────────────────────────────────────────────────────────────────────────────
   copyright:
-    notice: "© {year} {name}"
+    notice: "© {year} 知影工作室"
     license:
       type: cc
       allow_derivatives: true
       share_alike: true
-      allow_commercial: false
+      allow_commercial: true
 
   # ────────────────────────────────────────────────────────────────────────────
-  # CONTENT
-  # Math is enabled by default for technical presentations
+  # 内容设置
   # ────────────────────────────────────────────────────────────────────────────
   content:
     math:
-      enable: true                      # Enable LaTeX math for technical decks
+      enable: false
     toc:
-      enable: false                     # Not needed for slides
+      enable: false
     reading_time:
-      enable: false                     # Not relevant for slides
+      enable: false
 
   # ────────────────────────────────────────────────────────────────────────────
-  # SEARCH
+  # 搜索
   # ────────────────────────────────────────────────────────────────────────────
   search:
-    enable: true
+    enable: false
     suggestions: []
 
   # ────────────────────────────────────────────────────────────────────────────
-  # COMMENTS - Disabled by default
+  # 评论
   # ────────────────────────────────────────────────────────────────────────────
   comments:
     enable: false
 
   # ────────────────────────────────────────────────────────────────────────────
-  # ANALYTICS - Add your tracking IDs
+  # 分析统计
   # ────────────────────────────────────────────────────────────────────────────
   analytics:
     google:
@@ -111,26 +106,21 @@ hugoblox:
       domain: ""
 
   # ────────────────────────────────────────────────────────────────────────────
-  # LOCALE
+  # 本地化
   # ────────────────────────────────────────────────────────────────────────────
   locale:
-    date_format: "Jan 2, 2006"
-    time_format: "3:04 PM"
+    date_format: "2006年1月2日"
+    time_format: "15:04"
 
   # ────────────────────────────────────────────────────────────────────────────
-  # SECURITY - Allow slides to be embedded in iframes
+  # 安全设置
   # ────────────────────────────────────────────────────────────────────────────
   security:
-    frame_options: allow                 # deny | sameorigin | allow - allow enables iframe embedding
+    frame_options: allow
 
   # ────────────────────────────────────────────────────────────────────────────
-  # PREMIUM
-  # Premium features and creator program (affiliates)
+  # 专业版
   # ────────────────────────────────────────────────────────────────────────────
   pro:
-    # Hide "Powered by HugoBlox" attribution
-    # Requires: HugoBlox Premium to support HugoBlox via alternative means
-    # Note: Even with Premium, you can keep this false to support open source!
-    # Get Premium: https://hugoblox.com/premium
     hide_attribution: false
     affiliate_code: ""
