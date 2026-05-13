@@ -14,3 +14,6 @@ main:
   - name: 架构
     url: /#architecture
     weight: 5
+  - name: 登录
+    url: /login/
+    weight: 6

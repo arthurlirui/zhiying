@@ -47,3 +47,26 @@
 
 [[plugins]]
   package = "netlify-plugin-hugo-cache-resources"
+
+# ══════════════════════════════════════════════════════════════════════════════
+# API 代理规则 - 将 /api/* 请求代理到后端服务
+# 部署时需将 API_URL 替换为实际后端地址，或使用 Netlify 环境变量
+# ══════════════════════════════════════════════════════════════════════════════
+
+[[redirects]]
+  from = "/api/auth/*"
+  to = "https://your-api-server.com/api/auth/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/*"
+  to = "https://your-api-server.com/api/:splat"
+  status = 200
+  force = true
+
+# OAuth 回调页 - 确保单页应用路由正常
+[[redirects]]
+  from = "/auth/callback/"
+  to = "/auth/callback/index.html"
+  status = 200
