@@ -1,5 +1,5 @@
 ---
-title: 知影精选
+title: 精选问答
 summary: 通勤路上的知识精选
 date: 2025-01-01
 type: landing

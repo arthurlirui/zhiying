@@ -2,7 +2,7 @@ main:
   - name: 首页
     url: /
     weight: 1
-  - name: 精选
+  - name: 精选问答
     url: /feed/
     weight: 2
   - name: 功能

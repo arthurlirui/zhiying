@@ -24,8 +24,8 @@ sections:
         src: "media/hero-illustration.svg"
         alt: "知影AI读帖官"
       primary_action:
-        text: "立即体验"
-        url: "/zhihu/"
+        text: "精选问答"
+        url: "/feed/"
         icon: hero/play
       secondary_action:
         text: "了解更多"
@@ -166,8 +166,8 @@ sections:
         
         万字长文变3分钟，地铁公交变课堂。
       primary_action:
-        text: "立即体验"
-        url: "/zhihu/"
+        text: "精选问答"
+        url: "/feed/"
         icon: hero/rocket-launch
       secondary_action:
         text: "了解更多"
