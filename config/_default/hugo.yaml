@@ -6,7 +6,7 @@
 title: "知影 · AI读帖官"
 
 # Website URL
-baseURL: 'https://zhiying.example.com/'
+baseURL: 'https://zhiying-web.netlify.app/'
 
 ############################
 ## LANGUAGE

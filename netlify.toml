@@ -18,6 +18,8 @@
     echo "=== Build completed successfully ==="
   """
   publish = "public"
+  # Netlify Functions 目录
+  functions = "netlify/functions"
 
 [build.environment]
   HUGO_VERSION = "0.161.1"
@@ -49,24 +51,66 @@
   package = "netlify-plugin-hugo-cache-resources"
 
 # ══════════════════════════════════════════════════════════════════════════════
-# API 代理规则 - 将 /api/* 请求代理到后端服务
-# 部署时需将 API_URL 替换为实际后端地址，或使用 Netlify 环境变量
+# API 路由 - 将 /api/* 映射到 Netlify Functions
+# Netlify Functions 默认路径: /.netlify/functions/<name>
+# 以下重写让前端可以简洁地调用 /api/auth/xxx
 # ══════════════════════════════════════════════════════════════════════════════
 
 [[redirects]]
-  from = "/api/auth/*"
-  to = "https://your-api-server.com/api/auth/:splat"
+  from = "/api/auth/oauth-callback"
+  to = "/.netlify/functions/auth-zhihu"
   status = 200
-  force = true
 
 [[redirects]]
-  from = "/api/*"
-  to = "https://your-api-server.com/api/:splat"
+  from = "/api/auth/me"
+  to = "/.netlify/functions/auth-me"
   status = 200
-  force = true
 
-# OAuth 回调页 - 确保单页应用路由正常
+# ══════════════════════════════════════════════════════════════════════════════
+# OAuth 回调路由
+# 关键: 知乎回调 /auth/callback/?code=XXX&state=XXX
+# 必须保留 query params，Netlify 默认会传递
+# ══════════════════════════════════════════════════════════════════════════════
+
+[[redirects]]
+  from = "/auth/callback"
+  to = "/auth/callback/index.html"
+  status = 200
+  # query params 自动保留，无需额外配置
+
 [[redirects]]
   from = "/auth/callback/"
   to = "/auth/callback/index.html"
   status = 200
+
+# ══════════════════════════════════════════════════════════════════════════════
+# CORS 安全响应头
+# ══════════════════════════════════════════════════════════════════════════════
+
+[[headers]]
+  for = "/api/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "https://zhiying-web.netlify.app"
+    Access-Control-Allow-Methods = "GET, POST, OPTIONS"
+    Access-Control-Allow-Headers = "Content-Type, Authorization"
+    Access-Control-Allow-Credentials = "true"
+    Access-Control-Max-Age = "86400"
+
+[[headers]]
+  for = "/.netlify/functions/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "https://zhiying-web.netlify.app"
+    Access-Control-Allow-Methods = "GET, POST, OPTIONS"
+    Access-Control-Allow-Headers = "Content-Type, Authorization"
+    Access-Control-Allow-Credentials = "true"
+
+# ══════════════════════════════════════════════════════════════════════════════
+# 安全头
+# ══════════════════════════════════════════════════════════════════════════════
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
